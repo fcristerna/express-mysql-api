@@ -13,6 +13,7 @@ var conexion = mysql.createConnection({
     database: process.env.DB_NAME
 });
 
+
 // abrir la conexion
 conexion.connect((err)=>{
 
