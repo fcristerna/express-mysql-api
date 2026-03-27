@@ -183,5 +183,5 @@ async function test() {
     }
 }
 
-test();
+// test();
 export default alumnosDB;
