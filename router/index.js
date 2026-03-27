@@ -26,6 +26,7 @@ router.get("/matricula/:matricula", async (req, res) => {
     }
 });
 
+
 // obtener alumno por ID
 router.get("/:id", async (req, res) => {
     try {
