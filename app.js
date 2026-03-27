@@ -1,18 +1,25 @@
 import 'dotenv/config';
 import express from 'express';
-import http from "http";
+import cors from 'cors';
 import router from './router/index.js';
 import path from 'path';
-import alumnosDB from './models/models.js';
+import { fileURLToPath } from 'url';
 
-// generar objeto principal
+const puerto = 3006;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 
-// usar objeto router
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/', router);
 
-// iniciar servidor puerto
-const puerto = 3000;
-app.listen(puerto,()=>{
-    console.log("se inicio servidor")
-})
+app.listen(puerto, ()=>{
+    console.log("Servidor iniciado en puerto " + puerto);
+});
