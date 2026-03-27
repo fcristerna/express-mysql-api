@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card shadow">
+                <div class="card-body py-5">
+                    <h2 class="card-title mb-3">Sistema de Gestión de Alumnos</h2>
+                    <p class="card-text text-muted mb-4">
+                        Administra el registro de alumnos mediante la API REST conectada a MySQL.
+                    </p>
+                    <a href="/alumnos" class="btn btn-primary btn-lg me-3">
+                        Ir a Gestión de Alumnos
+                    </a>
+                    <a href="/api/todos" class="btn btn-outline-secondary btn-lg" target="_blank">
+                        Ver API (JSON)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer') %>
