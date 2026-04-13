@@ -20,5 +20,6 @@ app.use(express.static(path.join(__dirname, '../unidad0353-front')));
 app.use('/', router);
 
 app.listen(puerto, () => {
-    console.log("Servidor iniciado en puerto " + puerto);
+    console.log(" Servidor iniciado en puerto " + puerto);
 });
+
