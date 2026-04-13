@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../unidad0353-front')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', router);
 
